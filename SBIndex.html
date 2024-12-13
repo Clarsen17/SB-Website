@@ -4,58 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skyburger Company - Arma 3 Unit</title>
+    <link rel="icon" href="SKYBURGER_Deluxe_Embroidery_No_Text_2.png" type="image/png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Verdana', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #fff;
+            background-color: #1b1b1b;
+            color: #f4f4f4;
+            line-height: 1.6;
         }
 
         header {
-            background: url('https://via.placeholder.com/1920x600') no-repeat center center;
-            background-size: cover;
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        header img.banner {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        header img.banner.active {
+            opacity: 1;
+        }
+
+        header .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
             text-align: center;
-            padding: 50px 20px;
             color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
         }
 
-        header img {
+        header .content img {
             width: 150px;
+            margin-bottom: 10px;
         }
 
-        header h1 {
-            font-size: 3em;
-            margin: 20px 0;
+        header .content h1 {
+            font-size: 2.5em;
+            margin: 10px 0;
         }
 
-        header p {
-            font-size: 1.2em;
+        header .content p {
+            font-size: 1em;
         }
 
         .content {
             padding: 20px;
-            max-width: 800px;
+            max-width: 900px;
             margin: auto;
         }
 
         .content h2 {
             color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content ul li {
+            background: #333;
             margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
         }
 
-        .content p {
-            line-height: 1.6;
+        .content ul li strong {
+            color: #ffcc00;
         }
 
-        .content a {
+        .video-section {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+            justify-content: start;
+        }
+
+        .video-section iframe {
+            flex: 0 0 auto;
+            scroll-snap-align: start;
+            border: none;
+            width: 560px;
+            height: 315px;
+            border-radius: 10px;
+        }
+
+        .discord-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .discord-section img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .discord-section a {
+            font-size: 1.2em;
             color: #ffcc00;
             text-decoration: none;
-        }
-
-        .content a:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -67,60 +135,70 @@
 
         footer p {
             margin: 0;
-        }
-
-        .banner {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-        .banner img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border: 2px solid #ffcc00;
+            font-size: 0.9em;
+            color: #bbb;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="/mnt/data/SKYBURGER_Deluxe_Embroidery_No_Text_2.png" alt="Skyburger Logo">
-        <h1>Skyburger Company</h1>
-        <p>Laid-back Arma 3 Gameplay, Zero Stress</p>
+        <img src="SBWeb.png" alt="Skyburger Banner 1" class="banner active">
+        <img src="SBWeb2.png" alt="Skyburger Banner 2" class="banner">
+        <img src="SBWeb3.png" alt="Skyburger Banner 3" class="banner">
+        <div class="content">
+            <img src="SKYBURGER_Deluxe_Embroidery_No_Text_2.png" alt="Skyburger Logo">
+            <h1>Skyburger Company</h1>
+        </div>
     </header>
 
     <div class="content">
+        <h2>Join Us</h2>
+        <div class="discord-section">
+            <img src="discord.png" alt="Discord Logo">
+            <a href="https://discord.gg/uZZyB5V7k9" target="_blank">Join our Discord for more information!</a>
+        </div>
+
         <h2>Welcome to Skyburger Company</h2>
-        <p>Looking for a laid-back yet well-organized Arma 3 unit? Skyburger Company has you covered!</p>
+        <p>Are you tired of ranks? Fed up with mandatory attendance? Would you like to do more than the same job every time? Welcome to Skyburger.</p>
+        <p>We are a semi-casual Arma 3 unit, blending fun and organization. While we encourage a certain level of decorum, we also welcome shenanigans—just make sure they don't disrupt others' experiences.</p>
+        <p>Anyone can sign up for any role, mission by mission. All we ask is that you know how to perform the role's duties. You will be placed on probation for your first two missions, during which you'll observe how we operate. During probation, you cannot take on leadership positions and are expected to learn names and voices while gauging our playstyle. Once probation ends, you'll gain full access to roles and channels.</p>
+        <p>Remember, we're here to have fun. If you think twice about doing something "funny," it's probably best not to do it. We're all about creating an enjoyable and respectful environment for everyone.</p>
 
         <h2>What We Offer</h2>
         <ul>
             <li><strong>Flexible Operations:</strong> Our zeuses set operation times, usually starting around 7 PM CST, with the number of ops varying week to week.</li>
             <li><strong>Diverse Gameplay:</strong> No restrictions on time periods or factions—one week you might be fighting as NATO, and the next, a rebel militia.</li>
-            <li><strong>Custom Modpack:</strong> A robust mod collection, including RHS, totaling around 65GB to deliver immersive experiences.</li>
+            <li><strong>Custom Modpack:</strong> A robust mod collection, including RHS, totaling around 80GB to deliver immersive experiences.</li>
             <li><strong>Dedicated Server & TFAR:</strong> We provide a reliable server and use TFAR for immersive communication.</li>
+            <li><strong>Inclusive Community:</strong> LGBTQ+ friendly and welcoming to players of all experience levels.</li>
         </ul>
 
         <h2>Who We Are</h2>
         <p>Founded in August 2021, Skyburger Company is a welcoming community that’s LGBTQ+ friendly and open to players of all experience levels. Whether you’re a battle-hardened Arma veteran or just stepping into the field, you’ll find a home here.</p>
 
-        <h2>See Us In Action</h2>
-        <p>Check out our unit in action through this short compilation video: <a href="https://youtu.be/8kRHTdUA1nk?si=39eEPoqgW5qjaCN_" target="_blank">Watch on YouTube</a></p>
-
-        <h2>Join Us</h2>
-        <p>Ready to join? <a href="https://discord.gg/uZZyB5V7k9" target="_blank">Join our Discord</a> for more information!</p>
-    </div>
-
-    <div class="banner">
-        <img src="SBWeb.png" alt="Banner 1">
-        <img src="https://via.placeholder.com/300x200" alt="Banner 2">
-        <img src="https://via.placeholder.com/300x200" alt="Banner 3">
+        <h2>Member Videos</h2>
+        <div class="video-section">
+            <iframe src="https://www.youtube.com/embed/50ESyskOw4Y?si=PUVMdAW88Oo5XPjK" title="YouTube video player" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/sA-mZTH2KSw?si=zfXsXR1UlFdNrvaj" title="YouTube video player" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/8kRHTdUA1nk?si=jnAhdraDcY01L9GP" title="YouTube video player" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/4rIJpPzYKEE?si=4a01TTtQns0UuMod" title="YouTube video player" allowfullscreen></iframe>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2024 Skyburger Company. All rights reserved.</p>
     </footer>
+
+    <script>
+        const headerImages = document.querySelectorAll('header img.banner');
+        let headerIndex = 0;
+
+        function changeHeaderImage() {
+            headerImages[headerIndex].classList.remove('active');
+            headerIndex = (headerIndex + 1) % headerImages.length;
+            headerImages[headerIndex].classList.add('active');
+        }
+
+        setInterval(changeHeaderImage, 3000);
+    </script>
 </body>
-</html>
